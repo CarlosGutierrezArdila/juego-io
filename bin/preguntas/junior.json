@@ -1,0 +1,48 @@
+{
+	"preguntas": [
+	{
+		"texto": "LaWeaCosmica",
+		"asunto": "LaWea",
+		"repeticiones": 0,
+		"opciones": [
+			{
+				"texto": "1",
+				"reputacion": 2,
+				"cargo": 1
+			},
+			{
+				"texto": "2",
+				"reputacion": 1,
+				"cargo": 2
+			},
+			{
+				"texto": "3",
+				"reputacion": -2,
+				"cargo": 3
+			}
+		]
+	},
+	{
+		"texto": "LaWeaCosmica",
+		"asunto": "LaWea",
+		"repeticion": 0,
+		"opciones": [
+			{
+				"texto": "1",
+				"reputacion": 2,
+				"cargo": 1
+			},
+			{
+				"texto": "2",
+				"reputacion": 1,
+				"cargo": 2
+			},
+			{
+				"texto": "3",
+				"reputacion": -2,
+				"cargo": 3
+			}
+		]
+	}
+	]
+}
