@@ -1,16 +1,16 @@
-package Interprete;
+package interprete;
 
 import org.json.JSONArray;
 import org.json.JSONObject;
 
-import Cuestionario.Categoria;
-import Cuestionario.Opcion;
-import Cuestionario.Pregunta;
+import cuestionario.Categoria;
+import cuestionario.Opcion;
+import cuestionario.Pregunta;
 
 public class Convertidor {
 	
 	public Categoria convertir(String path) {
-		LeerArchivo la = new LeerArchivo();
+		Lector la = new Lector();
 		JSONObject json = new JSONObject(la.leer(path));
 		JSONArray array = json.getJSONArray("preguntas");
 		Categoria categoria = new Categoria();
@@ -18,6 +18,7 @@ public class Convertidor {
 			Pregunta pregunta = new Pregunta();
 			pregunta.asunto = array.getJSONObject(iter).getString("asunto");
 			pregunta.texto = array.getJSONObject(iter).getString("texto");
+			pregunta.repeticiones = array.getJSONObject(iter).getInt("repeticiones");
 			JSONArray arrayOp = array.getJSONObject(iter).getJSONArray("opciones");
 			for(int jr=0; jr < arrayOp.length(); jr++) {
 				Opcion opcion = new Opcion();

@@ -1,11 +1,11 @@
-package Interprete;
+package interprete;
 
 import java.io.BufferedReader;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 
-public class LeerArchivo {
+public class Lector {
 	
 	public String leer(String path) {
 		String text = "";
@@ -14,7 +14,6 @@ public class LeerArchivo {
 			br = new BufferedReader(new FileReader(path));
 		    StringBuilder sb = new StringBuilder();
 		    String line = br.readLine();
-
 		    while (line != null) {
 		        sb.append(line);
 		        sb.append(System.lineSeparator());
@@ -23,10 +22,8 @@ public class LeerArchivo {
 		    text = sb.toString();
 		    br.close();
 		} catch (FileNotFoundException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		} catch (IOException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 		return text;

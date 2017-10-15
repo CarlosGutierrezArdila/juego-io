@@ -1,4 +1,4 @@
-package Cuestionario;
+package cuestionario;
 
 public class Opcion {
 	public String texto;
